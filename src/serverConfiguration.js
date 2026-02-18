@@ -23,9 +23,12 @@ app.get("/", (request, response) => {
 
 // Activate the server so that it can start
 // listening for incoming web traffic
-app.listen(PORT, () => {
-	console.log("Server has started on port " + PORT);
-});
+// KEEP THIS COMMENTED OUT!
+// Server configuration file should NOT 
+// run the server within this file!!!!
+// app.listen(PORT, () => {
+// 	console.log("Server has started on port " + PORT);
+// });
 
 // Export the server to reuse it in other files
 // e.g. automated unit testing 

@@ -1,3 +1,3 @@
-const {app} = require("../src/index.js");
+const {app} = require("../src/serverConfiguration.js");
 
 console.log(app);
