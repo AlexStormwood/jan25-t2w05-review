@@ -15,6 +15,8 @@ const app = express();
 // we have to do our configuration and
 // mount any routes we want our server to respond to!
 
+// localhost:3000/
+// serverInstance.verb(path, function)
 app.get("/", (request, response) => {
 	response.json({
 		message:"Hello world!"

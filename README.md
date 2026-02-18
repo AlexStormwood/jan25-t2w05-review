@@ -3,13 +3,13 @@ Review of NodeJS and ExpressJS intro topics.
 
 
 Goals: 
-	- ExpressJS project structure / architecture 
-	- Intro to ExpressJS "ExpressJS Challenge" solution
-		- GET "/" 
+	- [x] ExpressJS project structure / architecture 
+	- [ ] Intro to ExpressJS "ExpressJS Challenge" solution
+		- [x] GET "/" 
 			- root route says a nice message 
-		- POST "/repeater"
+		- [ ] POST "/repeater"
 			- repeater route returns a modified string
-		- CRUD "/messages/"
+		- [ ] CRUD "/messages/"
 			- GET "/" returns Message A 
 			- POST "/" returns Message B 
 			- PATCH "/" or "/:id" returns Message C 
