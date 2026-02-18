@@ -3,6 +3,7 @@ Review of NodeJS and ExpressJS intro topics.
 
 
 Goals: 
+
 	- [x] ExpressJS project structure / architecture 
 	- [ ] Intro to ExpressJS "ExpressJS Challenge" solution
 		- [x] GET "/" 
