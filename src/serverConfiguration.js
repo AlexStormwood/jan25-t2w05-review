@@ -11,6 +11,15 @@ const express = require("express");
 // This is the bit we can customise and configure
 const app = express();
 
+// Do app configuration BEFORE any routes!!
+// Otherwise some routes won't have your fancy configuration!!!
+
+// Enable all routes to receive JSON body data on requests
+app.use(express.json());
+// request.body.blahblahblah now works!
+
+
+
 // Between "app = express();" and "app.listen()",
 // we have to do our configuration and
 // mount any routes we want our server to respond to!
@@ -22,6 +31,32 @@ app.get("/", (request, response) => {
 		message:"Hello world!"
 	});
 });
+
+
+// serverInstance.verb(path, function)
+// localhost:3000/repeater
+app.post("/repeater", (request, response) => {
+
+	// 1. pull data from the incoming request
+	// request - has properties 
+	// body - undefined 
+	// customMessageToRepeat - string 
+
+	let messageToRepeat = request.body.customMessageToRepeat;
+
+	// 2. do the logic/functionality of the route 
+	// to create our expected result
+	let result = messageToRepeat + messageToRepeat + messageToRepeat;
+
+	// 3. send the result back as a response
+	// for the frontend or human or other API to read and receive
+	response.json({
+		// message:"Not yet implemented!"
+		message: result
+	});
+});
+
+
 
 // Activate the server so that it can start
 // listening for incoming web traffic
