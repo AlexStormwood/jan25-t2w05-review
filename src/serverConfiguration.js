@@ -57,48 +57,10 @@ app.post("/repeater", (request, response) => {
 });
 
 
-
-//#region Message controller routes 
-// localhost:3000/messages
-
-
-// GET localhost:3000/messages/
-app.get("/messages/", (request, response) => {
-	response.json({
-		message:"Message GET route activated!!!"
-	});
-});
-
-// POST localhost:3000/messages/
-app.post("/messages/", (request, response) => {
-	response.json({
-		message:"Message POST route activated!!!"
-	});
-});
-
-// PATCH localhost:3000/messages/
-app.patch("/messages/", (request, response) => {
-	response.json({
-		message:"Message PATCH route activated!!!"
-	});
-});
-
-// DELETE localhost:3000/messages
-app.delete("/messages/", (request, response) => {
-	response.json({
-		message:"Message DELETE route activated!!!"
-	});
-});
-
-
-
-
-
-//#endregion
-
-
-
-
+const {messagesRouter} = require("./controllers/MessagesController.js");
+// app.use(routerPath, importedRouter);
+// app.use(routerPathPrefix, importedRouter)
+app.use("/messages", messagesRouter);
 
 
 
